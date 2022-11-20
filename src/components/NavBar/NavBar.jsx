@@ -2,8 +2,8 @@ import React from 'react'
 import { AppBar, Toolbar, Box, Container, Button } from '@mui/material'
 import './NavBar.css'
 const pagesLeft = ['', '', '', '']
-// const pagesRight = ["", "How To", "Contact"];
-const pagesRight = ['Home', 'Menu', 'Contact', 'Order']
+// const pagesRight = ["", "How To", "Contact", "Order"];
+const pagesRight = ['Home', 'Menu', 'Contact']
 
 function NavBar() {
   return (
