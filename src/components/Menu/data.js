@@ -1,10 +1,7 @@
 export const menu_data = [
-  { title: "Item1", item_price: 1, desc: "Desc1", img_src: "" },
-  { title: "Item2", item_price: 1, desc: "Desc1", img_src: "" },
-  { title: "Item3", item_price: 1, desc: "Desc1", img_src: "" },
-  { title: "Item4", item_price: 1, desc: "Desc1", img_src: "" },
-  { title: "Item1", item_price: 1, desc: "Desc1", img_src: "" },
-  { title: "Item2", item_price: 1, desc: "Desc1", img_src: "" },
-  { title: "Item3", item_price: 1, desc: "Desc1", img_src: "" },
-  { title: "Item4", item_price: 1, desc: "Desc1", img_src: "" },
-];
+  { title: "Bánh Lọc", item_price: "$60 / 100 cái", desc: "", img_src: "./images/banh-loc.jpg" },
+  { title: "Bánh Lọc Chay", item_price: "$50/ 100 cái", desc: "", img_src: "./images/banh-loc-chay.jpg" },
+  { title: "Bánh Nậm", item_price: "$80 / 100 cái", desc: "", img_src: "./images/banh-nam.jpg" },
+  { title: "Bánh Ít Mặn", item_price: "$70 / 100 cái", desc: "", img_src: "./images/banh-it-man.jpeg" },
+  { title: "Bánh Gói", item_price: "$50 / 100 cái", desc: "", img_src: "./images/banh-goi.jpg" },
+]

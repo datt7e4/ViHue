@@ -1,0 +1,11 @@
+.menu-img {
+    width: 50%;
+   
+}
+
+@media only screen and (max-width: 1100px) {
+    .menu-img{
+        width: 80%
+
+    }
+}
