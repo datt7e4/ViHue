@@ -1,9 +1,9 @@
 import React from 'react'
 import { AppBar, Toolbar, Box, Container, Button } from '@mui/material'
-
-const pagesLeft = ['Home', 'Menu', 'Contact']
+import './NavBar.css'
+const pagesLeft = ['', '', '', '']
 // const pagesRight = ["", "How To", "Contact"];
-const pagesRight = ['', '', 'Order']
+const pagesRight = ['Home', 'Menu', 'Contact', 'Order']
 
 function NavBar() {
   return (
@@ -14,7 +14,14 @@ function NavBar() {
       sx={{ background: 'white' }}
     >
       <Container maxWidth="xl">
-        <Toolbar sx={{ justifyContent: 'space-between' }}>
+        <Toolbar
+          sx={{
+            justifyContent: 'space-between',
+            display: 'flex',
+            // flexDirection: 'column',
+          }}
+          className="toolbar"
+        >
           <Box>
             {pagesLeft.map((page) => {
               return (
@@ -53,6 +60,12 @@ function NavBar() {
                     textTransform: 'none',
                     visibility: page === '' ? 'hidden' : 'visible',
                   }}
+                  href={
+                    `#${page.toLocaleLowerCase()}`
+                    // page === "Menu"
+                    //   ? `#${page.toLocaleLowerCase()}`
+                    //   : ""
+                  }
                 >
                   {page}
                 </Button>

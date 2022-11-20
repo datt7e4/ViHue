@@ -17,7 +17,7 @@ const FACEBOOK_LINK = 'https://www.facebook.com/chu.choa.102361'
 function App() {
   return (
     <>
-      <Box sx={{ position: 'fixed', bottom: '10%', left: '80%' }}>
+      <Box sx={{ position: 'fixed', bottom: '10%', left: '85%' }}>
         <IconButton color="inherit" size="medium" href={PHONE_LINK}>
           <LocalPhoneIcon fontSize="large" />
         </IconButton>
