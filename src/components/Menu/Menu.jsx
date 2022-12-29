@@ -1,16 +1,21 @@
-import React from 'react'
-import { Container, Grid, ThemeProvider, Typography } from '@mui/material'
-import { menu_data } from './data'
-import './Menu.css'
+import React, { useContext } from "react";
+import { LanguageContext } from "../../App";
+import { Container, Grid, ThemeProvider, Typography } from "@mui/material";
+import { getMenuData, getMenuDescription } from "../constants/menu";
+import "./Menu.css";
+import { menuDescriptionConst } from "../constants/constant";
 
 function Menu() {
+  const isEnglish = useContext(LanguageContext);
+  const menu_data = getMenuData(isEnglish);
+  const menu_description = getMenuDescription(isEnglish);
+
   return (
-    <Container id="menu" align="center" maxWidth="xl">
-      <Typography variant="h3" sx={{ margin: '2rem' }}>
+    <Container id={isEnglish ? "menu" : "thu-don"} align="center" maxWidth="xl">
+      <Typography variant="h3" sx={{ margin: "2rem" }}>
         Menu
       </Typography>
-      <Typography>FREE SHIP OVERNIGHT TỪ 45 CÂY TRỞ LÊN</Typography>
-      <Typography>TẶNG 50GR TÔM KHÔ USA TỪ 70 CÂY TRỞ LÊN</Typography>
+      <Typography>{menu_description}</Typography>
       <Grid container marginTop="3rem" marginBottom="3rem">
         {menu_data.map((item) => {
           return (
@@ -35,11 +40,11 @@ function Menu() {
               </Typography>
               <Typography variant="body2">{item.item_price}</Typography>
             </Grid>
-          )
+          );
         })}
       </Grid>
     </Container>
-  )
+  );
 }
 
-export default Menu
+export default Menu;

@@ -1,84 +1,38 @@
-import React from 'react'
-import { AppBar, Toolbar, Box, Container, Button } from '@mui/material'
-import './NavBar.css'
-const pagesLeft = ['', '', '', '']
-// const pagesRight = ["", "How To", "Contact", "Order"];
-const pagesRight = ['Home', 'Menu', 'Contact']
+import React from "react";
+import { AppBar, Toolbar, Container } from "@mui/material";
+import "./NavBar.css";
+import RightNav from "./RightNav";
 
-function NavBar() {
+function NavBar({ isEnglish, setIsEnglish }) {
   return (
     <AppBar
       position="sticky"
       //Remove Shadow
       elevation={0}
-      sx={{ background: 'white' }}
+      sx={{ background: "white" }}
     >
       <Container maxWidth="xl">
         <Toolbar
           sx={{
-            justifyContent: 'space-between',
-            display: 'flex',
-            // flexDirection: 'column',
+            justifyContent: "space-between",
           }}
           className="toolbar"
         >
-          <Box>
-            {pagesLeft.map((page) => {
-              return (
-                <Button
-                  key={page}
-                  sx={{
-                    color: 'black',
-                    textTransform: 'none',
-                    visibility: page === '' ? 'hidden' : 'visible',
-                  }}
-                  href={
-                    `#${page.toLocaleLowerCase()}`
-                    // page === "Menu"
-                    //   ? `#${page.toLocaleLowerCase()}`
-                    //   : ""
-                  }
-                >
-                  {page}
-                </Button>
-              )
-            })}
-          </Box>
-          <img
-            style={{ borderRadius: '50%' }}
-            src="./logo.jpg"
-            alt="logo"
-            width="50"
-          />
-          <Box>
-            {pagesRight.map((page) => {
-              return (
-                <Button
-                  key={page}
-                  sx={{
-                    color: 'black',
-                    textTransform: 'none',
-                    visibility: page === '' ? 'hidden' : 'visible',
-                  }}
-                  href={
-                    `#${page.toLocaleLowerCase()}`
-                    // page === "Menu"
-                    //   ? `#${page.toLocaleLowerCase()}`
-                    //   : ""
-                  }
-                >
-                  {page}
-                </Button>
-              )
-            })}
-          </Box>
+          <div>
+            <img
+              style={{ borderRadius: "50%" }}
+              src="./logo.jpg"
+              alt="logo"
+              width="50"
+            />
+          </div>
+          <div>
+            <RightNav isEnglish={isEnglish} setIsEnglish={setIsEnglish} />
+          </div>
         </Toolbar>
       </Container>
     </AppBar>
-    // <>Hello???</>
-  )
+  );
 }
 
-function handleButtonClick(e) {}
-
-export default NavBar
+export default NavBar;
