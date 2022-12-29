@@ -1,4 +1,4 @@
-import { Button, ThemeProvider, Typography } from "@mui/material";
+import { ThemeProvider, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { useContext } from "react";
