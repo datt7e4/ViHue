@@ -11,7 +11,11 @@ function Menu() {
   const menu_description = getMenuDescription(isEnglish);
 
   return (
-    <Container id={isEnglish ? "menu" : "thu-don"} align="center" maxWidth="xl">
+    <Container
+      id={isEnglish ? "menu" : "thuc-don"}
+      align="center"
+      maxWidth="xl"
+    >
       <Typography variant="h3" sx={{ margin: "2rem" }}>
         Menu
       </Typography>

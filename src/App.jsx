@@ -44,7 +44,7 @@ function App() {
 
       <NavBar setIsEnglish={setIsEnglish} isEnglish={isEnglish} />
       <Hero />
-      <Menu id={isEnglish ? "home" : "trang-chu"} />
+      <Menu />
       <Divider />
       <Footer />
     </LanguageContext.Provider>

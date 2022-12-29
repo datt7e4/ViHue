@@ -13,7 +13,6 @@ function RightNav({ isEnglish, setIsEnglish }) {
           <Button
             key={page}
             sx={{
-              marginLeft: "1rem",
               color: "black",
               textTransform: "none",
               visibility: page === "" ? "hidden" : "visible",
@@ -24,7 +23,7 @@ function RightNav({ isEnglish, setIsEnglish }) {
           </Button>
         );
       })}
-      <div style={{ marginLeft: "1rem" }}>
+      <div className="select-lang">
         <SelectLanguage setIsEnglish={setIsEnglish} isEnglish={isEnglish} />
       </div>
     </Box>

@@ -13,7 +13,7 @@ function Hero() {
   const description = getPageDescription(isEnglish);
   return (
     <ThemeProvider theme={theme}>
-      <div className="container" id="home">
+      <div className="container" id={isEnglish ? "home" : "trang-chu"}>
         <BackgroundDiv image="./images/hero-background.jpg" />
         {/* <BackgroundDiv image="./images/banh-loc.jpg" /> */}
         {/* <BackgroundDiv image="./images/banh-loc.jpg" /> */}
